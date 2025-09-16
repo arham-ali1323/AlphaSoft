@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #2a3855 !important;
+}
+/* Hover effect for navbar links */
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  color: #fff !important; /* Bootstrap primary color */
+  background: #0d6efd; /* optional underline */
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+/* Hover effect for buttons (Login / Signup) */
+.navbar .btn:hover {
+  background-color: hwb(216 5% 1%);
+  color: #fff !important;
+  border-color: #0d6efd;
+  transition: 0.3s;
+}
+
+.hero,
+.bg-holder {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.carousel-caption {
+  text-align: left;
+  max-width: 600px;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+}
+.btn-custom {
+  padding: 10px 20px;
+  /* border-radius: 50px; */
+  font-weight: bold;
+}
+/* Read More Button */
+#btnReadMore {
+  transition: all 0.3s ease !important;
+  background-color: #2a3855 !important; /* dark navy */
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+/* Hover effect */
+#btnReadMore:hover {
+  background-color: #fff !important; /* white background */
+  color: #ffc107 !important; /* yellow text */
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Us button hover */
+#btnContactUs:hover {
+  background-color: #e0a800; /* darker yellow */
+  color: #fff;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+.feature-card {
+  transition: all 0.3s ease;
+  border-radius: 12px; /* optional for smooth look */
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+.info-card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.info-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  background-color: #f9f9f9; /* subtle hover bg */
+}
+
+.support-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.support-card:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  background: #f9f9f9;
+}
+.thing-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.thing-card:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  background: #f9f9f9;
+}
+
+.line {
+  width: 40px;
+  height: 3px;
+  background-color: #1f2a44; /* Dark navy */
+  margin: 15px auto 0;
+  border-radius: 3px;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.video-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.play-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.play-btn::before {
+  content: "▶";
+  font-size: 24px;
+  color: #333;
+}
+/* Card hover */
+.hover-card {
+  transition: all 0.3s ease;
+}
+.hover-card:hover {
+  background-color: #ffc107;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* Submit button hover */
+.btn-warning {
+  transition: all 0.3s ease;
+}
+.btn-warning:hover {
+  background-color: #2a3855 !important;
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.services a {
+  color: #2a3855;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.services a:hover {
+  color: #1f2a44;
+}
+.services-btn:hover {
+  border-radius: 10px;
+  background-color: #2a3855;
+  color: #fff !important;
+}
+.ring-icon {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #88898a;
+}
+.right-step {
+  background-image: url(./img/background-15.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Default state */
+.ring-icon {
+  width: 70px;       /* adjust size */
+  height: 70px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect on the ring */
+.ring-icon:hover {
+  background-color: #2A3855; /* navy background */
+  border-color: #2A3855;     /* navy border */
+}
+
+/* Hover effect on the bell icon */
+.ring-icon:hover .fa-bell {
+  color: #ffc107; /* yellow bell */
+}
+
+#services {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.brand-icon {
+  background-color: #2a3855;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+/* Card shadow */
+.card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* default soft shadow */
+  border-radius: 10px; /* optional smooth corners */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25); /* stronger shadow on hover */
+}
+
+/* Login======================================== */
+.Login {
+  background: url("./img/header-5.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  position: relative;
+}
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+}
+.logo-container img {
+  max-width: 100px; /* Adjust based on the actual logo size */
+}
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.card h4 {
+  color: #1a3c6e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.input-group-text {
+  background: transparent;
+  border: none;
+  border-right: 1px solid #ced4da;
+}
+.btn-dark {
+  background-color: #1a3c6e;
+  border: none;
+  padding: 0.5rem 2rem;
+}
+.btn-dark:hover {
+  background-color: #15325a;
+}
+/* signup=========================================== */
+.signup-container {
+  max-width: 450px;
+  margin: auto;
+  position: relative;
+}
+.card {
+  padding-top: 70px;
+  border-radius: 12px;
+}
+/* Shadow effect on hover */
+#financing,
+#chat,
+#call {
+  transition: 0.3s ease-in-out;
+  padding: 20px; /* optional, for spacing */
+  border-radius: 10px; /* smooth corners */
+}
+
+#financing:hover,
+#chat:hover,
+#call:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* small lift effect */
+}
+.footer {
+  background-color: #2a3855;
+}
+/* Footer link hover */
+.footer-link:hover {
+  color: #ffc107 !important; /* Yellow hover */
+  transition: color 0.3s ease;
+}
+
+/* Social hover */
+.footer-social:hover h5 {
+  color: #ffc107 !important;
+  transition: color 0.3s ease;
+}
+
+.footer-social:hover .brand-icon {
+  background-color: #ffc107 !important;
+  transition: background-color 0.3s ease;
+}
+/* Contact Us    ---------------------------------------------------------- */
+.Contact-section {
+  background: linear-gradient(135deg, #3d4c6f 0%, #3d4c6f 100%);
+  color: white !important;
+  padding: 80px 0;
+}
+.contact-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+.btn-primary {
+  background-color: #3d4c6f;
+  border-color: #3d4c6f;
+}
+.btn-primary:hover {
+  background-color: #3d4c6f;
+  border-color: #3d4c6f;
+}
+.contact-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3d4c6f;
+}
+
+
+
+
+.offerings-section .nav-pills .nav-link {
+  border-radius: 50px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+.offerings-section .nav-pills .nav-link.active {
+  background: #0d6efd;
+  color: #fff;
+}
+.offerings-section .nav-pills .nav-link:hover {
+  background: #0b5ed7;
+  color: #fff;
+}
+.accordion-button {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.accordion-button:hover {
+  background: #f8f9fa;
+  color: #0d6efd;
+}

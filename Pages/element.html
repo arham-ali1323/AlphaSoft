@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Software House — Demo</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons & Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand: #2A3855;     /* primary dark navy (change to match Figma) */
+      --accent: #ffc107;    /* accent (change to match Figma) */
+      --muted: #6c757d;
+      --card-radius: 12px;
+    }
+    body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#223; }
+    .navbar { background: #fff; }
+    .hero {
+      background: linear-gradient(180deg, rgba(42,56,85,0.06) 0%, rgba(255,255,255,0) 100%);
+      padding: 5.5rem 0;
+    }
+    .hero .display-4 { color: var(--brand); font-weight:700; }
+    .btn-accent { background: var(--accent); border: none; color:#222; }
+    .btn-outline-accent { border-color: var(--accent); color: var(--accent); }
+    .card-modern { border-radius: var(--card-radius); box-shadow: 0 6px 20px rgba(34,53,84,0.08); }
+    .service-icon { width:72px; height:72px; border-radius: 14px; display:flex; align-items:center; justify-content:center; background:#fff; box-shadow:0 6px 20px rgba(34,53,84,0.06); }
+    .line { width:68px; height:4px; background:var(--accent); margin:1rem auto 0; border-radius:2px; }
+    .partner-logo { filter:grayscale(100%); opacity:0.85; transition: all .25s ease; }
+    .partner-logo:hover { filter:none; opacity:1; transform:scale(1.06); }
+    .card-team img { border-radius: 12px; }
+    .testimonial-img { width:96px; height:96px; object-fit:cover; border-radius:50%; }
+    /* Tab pane animation */
+    .animated-tab { opacity:0; transform:translateY(10px); transition: all .45s ease; }
+    .animated-tab.show { opacity:1; transform:translateY(0); }
+    /* small helpers */
+    .muted-small { color:var(--muted); font-size:.95rem; }
+    /* footer */
+    .footer { background: #2A3855; color:#fff; }
+    .footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    /* responsive tweaks */
+    @media (max-width: 991px) {
+      .hero { padding:3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://via.placeholder.com/48x48.png?text=Logo" alt="logo" width="48" class="me-2">
+      <strong style="color:var(--brand)">SoftHouse</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navCollapse">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#offerings">Offerings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-3"><a class="btn btn-outline-accent btn-sm" href="#contact">Get Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4">We build software that scales your business</h1>
+        <p class="lead muted-small">Full-cycle product engineering — Web, Mobile & AI solutions from strategy to production.</p>
+        <div class="mt-4 d-flex flex-wrap gap-2">
+          <a href="#contact" class="btn btn-accent btn-lg me-2">Request a Quote</a>
+          <a href="#portfolio" class="btn btn-outline-accent btn-lg">See Portfolio</a>
+        </div>
+        <div class="mt-4">
+          <small class="muted-small">Trusted by startups & enterprises — 200+ projects delivered</small>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <!-- hero image placeholder -->
+        <img src="https://via.placeholder.com/720x420.png?text=Hero+Illustration" alt="hero" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="fw-bold">Services</h3>
+      <div class="line"></div>
+      <p class="muted-small mt-3">We design, build and maintain reliable software for web, mobile and cloud.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card-modern p-4 h-100 bg-white card">
+          <div class="d-flex gap-3">
+            <div class="service-icon">
+              <i class="fa-solid fa-code fa-lg" style="color:var(--brand)"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold">Web Development</h5>
+              <p class="muted-small mb-0">Modern web apps using React, Next.js, Node and scalable APIs.</p>
+            </div>
+          </div>
+          <div class="mt-3"><a href="#" class="text-decoration-none">Learn more <i class="fa-solid fa-arrow-right ms-1"></i></a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-modern p-4 h-100 bg-white card">
+          <div class="d-flex gap-3">
+            <div class="service-icon">
+              <i class="fa-solid fa-mobile-screen-button fa-lg" style="color:var(--brand)"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold">Mobile Apps</h5>
+              <p class="muted-small mb-0">Native & cross-platform apps (iOS, Android, Flutter/React Native).</p>
+            </div>
+          </div>
+          <div class="mt-3"><a href="#" class="text-decoration-none">Learn more <i class="fa-solid fa-arrow-right ms-1"></i></a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-modern p-4 h-100 bg-white card">
+          <div class="d-flex gap-3">
+            <div class="service-icon">
+              <i class="fa-solid fa-robot fa-lg" style="color:var(--brand)"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold">AI & Data</h5>
+              <p class="muted-small mb-0">ML, NLP, computer vision and data engineering to drive insights.</p>
+            </div>
+          </div>
+          <div class="mt-3"><a href="#" class="text-decoration-none">Learn more <i class="fa-solid fa-arrow-right ms-1"></i></a></div>
+        </div>
+      </div>
+      <!-- add more cards as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS (Tabs + Accordions) -->
+<section id="offerings" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our <span style="color:var(--brand)">Offerings</span></h2>
+      <p class="muted-small">Deep-dive solutions and services — click tabs to switch.</p>
+    </div>
+
+    <ul class="nav nav-pills justify-content-center mb-4" id="offerTabs" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tabServices" type="button">Our Services</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tabSolutions" type="button">Our Solutions</button></li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Services tab -->
+      <div id="tabServices" class="tab-pane fade show active animated-tab">
+        <div class="accordion" id="servicesAccordion">
+          <!-- item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#svc1">Development & QA</button>
+            </h2>
+            <div id="svc1" class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                <!-- full content included -->
+                <h6 class="fw-bold">Ensuring Compatibility & Integration</h6>
+                <p>Cross-platform compatibility, API integrations, CI/CD and robust testing.</p>
+                <h6 class="fw-bold">Testing & Validation</h6>
+                <p>Automated and manual testing, security and performance focus.</p>
+                <h6 class="fw-bold">User Experience</h6>
+                <p>Performance optimizations and accessible UX.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc2">Mobility & Apps</button>
+            </h2>
+            <div id="svc2" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                <h6 class="fw-bold">Native & Hybrid</h6>
+                <p>Optimized apps for iOS/Android, and cross-platform performance with Flutter / React Native.</p>
+                <h6 class="fw-bold">PWAs</h6>
+                <p>Progressive web apps for cross-device reach.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc3">IT Operations</button>
+            </h2>
+            <div id="svc3" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                <h6 class="fw-bold">DevOps & Automation</h6>
+                <p>CI/CD, infra as code and monitoring.</p>
+                <h6 class="fw-bold">Cybersecurity</h6>
+                <p>Security audits, pen testing, vulnerability remediation.</p>
+                <h6 class="fw-bold">Support</h6>
+                <p>24/7 operational support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solutions tab -->
+      <div id="tabSolutions" class="tab-pane fade animated-tab">
+        <div class="accordion" id="solutionsAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sol1">Education Technology</button>
+            </h2>
+            <div id="sol1" class="accordion-collapse collapse show" data-bs-parent="#solutionsAccordion">
+              <div class="accordion-body">
+                <h6 class="fw-bold">Managed Hosting</h6>
+                <p>Open edX hosting, migrations and custom LMS solutions.</p>
+                <h6 class="fw-bold">Instructional Design</h6>
+                <p>Interactive course design and analytics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sol2">Data, ML & AI</button>
+            </h2>
+            <div id="sol2" class="accordion-collapse collapse" data-bs-parent="#solutionsAccordion">
+              <div class="accordion-body">
+                <p>Predictive analytics, computer vision, NLP, BI and generative AI solutions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sol3">E-Commerce</button>
+            </h2>
+            <div id="sol3" class="accordion-collapse collapse" data-bs-parent="#solutionsAccordion">
+              <div class="accordion-body">
+                <p>AR shopping, voice commerce, AI chatbots and shop optimization.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="fw-bold">Selected Projects</h3>
+      <div class="line"></div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-modern overflow-hidden h-100">
+          <img src="https://via.placeholder.com/600x350.png?text=Project+1" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold">Project Alpha</h5>
+            <p class="muted-small">B2B platform, React + Node.js, payment integrations.</p>
+            <a href="#" class="text-decoration-none">Case study <i class="fa fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-modern overflow-hidden h-100">
+          <img src="https://via.placeholder.com/600x350.png?text=Project+2" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold">Commerce Pro</h5>
+            <p class="muted-small">E-commerce & AR shopping proof of concept.</p>
+            <a href="#" class="text-decoration-none">Case study <i class="fa fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-modern overflow-hidden h-100">
+          <img src="https://via.placeholder.com/600x350.png?text=Project+3" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold">Insight Engine</h5>
+            <p class="muted-small">Data platform with ML pipelines and dashboards.</p>
+            <a href="#" class="text-decoration-none">Case study <i class="fa fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="py-5 bg-secondary bg-opacity-10">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-6 col-md-2 text-center my-3"><img src="https://via.placeholder.com/120x60.png?text=Logo" class="partner-logo img-fluid" alt=""></div>
+      <div class="col-6 col-md-2 text-center my-3"><img src="https://via.placeholder.com/120x60.png?text=Logo" class="partner-logo img-fluid" alt=""></div>
+      <div class="col-6 col-md-2 text-center my-3"><img src="https://via.placeholder.com/120x60.png?text=Logo" class="partner-logo img-fluid" alt=""></div>
+      <div class="col-6 col-md-2 text-center my-3"><img src="https://via.placeholder.com/120x60.png?text=Logo" class="partner-logo img-fluid" alt=""></div>
+      <div class="col-6 col-md-2 text-center my-3"><img src="https://via.placeholder.com/120x60.png?text=Logo" class="partner-logo img-fluid" alt=""></div>
+      <div class="col-6 col-md-2 text-center my-3"><img src="https://via.placeholder.com/120x60.png?text=Logo" class="partner-logo img-fluid" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="fw-bold">Leadership</h3>
+      <div class="line"></div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card card-modern card-team p-3 h-100 text-center">
+          <img src="https://via.placeholder.com/300x200.png?text=Person" alt="" class="img-fluid mb-3">
+          <h5 class="fw-bold">Reenal Scott</h5>
+          <p class="muted-small">Founder & CEO</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card card-modern card-team p-3 h-100 text-center">
+          <img src="https://via.placeholder.com/300x200.png?text=Person" alt="" class="img-fluid mb-3">
+          <h5 class="fw-bold">Lily Anderson</h5>
+          <p class="muted-small">CTO</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card card-modern card-team p-3 h-100 text-center">
+          <img src="https://via.placeholder.com/300x200.png?text=Person" alt="" class="img-fluid mb-3">
+          <h5 class="fw-bold">Thomas Anderson</h5>
+          <p class="muted-small">VP Product</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="fw-bold">Get in Touch</h3>
+      <div class="line"></div>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="card card-modern p-4 h-100">
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input class="form-control" type="text" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="5" required></textarea>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-accent" id="contactSubmit" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="p-4">
+          <h5 class="fw-bold">Head Office</h5>
+          <p class="muted-small">123 Tech Lane, Cambridge, UK</p>
+          <p class="mb-1"><strong>Email:</strong> hello@softhouse.com</p>
+          <p><strong>Phone:</strong> +44 20 7946 0000</p>
+          <!-- Map placeholder -->
+          <div class="mt-3">
+            <img src="https://via.placeholder.com/600x300.png?text=Map+Embed" class="img-fluid rounded" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="fw-bold">SoftHouse</h5>
+        <p class="muted-small">We build robust software and AI solutions for startups & enterprises.</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold">Quick links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#offerings">Offerings</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 text-end">
+        <p>© <span id="year"></span> SoftHouse</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // small script: update year
+  document.getElementById('year').innerText = new Date().getFullYear();
+
+  // animation handler for tab panes: add .show class after bootstrap shows pane
+  const tabList = document.querySelectorAll('#offerTabs [data-bs-toggle="pill"]');
+  tabList.forEach(btn => {
+    btn.addEventListener('shown.bs.tab', e => {
+      document.querySelectorAll('.animated-tab').forEach(p => p.classList.remove('show'));
+      const target = document.querySelector(e.target.dataset.bsTarget);
+      // tiny delay to allow bootstrap to switch classes
+      setTimeout(() => target.classList.add('show'), 20);
+    });
+  });
+
+  // contact form simple toast (no server)
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    // Inform user — simple alert replace with nicer toast as needed
+    alert('Thanks! Your message is sent (demo). Replace this with real form handling.');
+    contactForm.reset();
+  });
+</script>
+</body>
+</html>
