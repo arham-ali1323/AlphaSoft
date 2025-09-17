@@ -34,6 +34,25 @@ p {
   transition: 0.3s;
 }
 
+/* Add hover color for all cards */
+.card:hover,
+.feature-card:hover,
+.info-card:hover,
+.support-card:hover,
+.thing-card:hover,
+.hover-card:hover {
+  background-color: #f0f8ff; /* light blue background on hover */
+  color: #2a3855; /* dark text color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover color for buttons */
+.btn:hover {
+  background-color: #2a3855 !important;
+  color: #fff !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .hero,
 .bg-holder {
   height: 100vh;
